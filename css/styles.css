@@ -66,6 +66,7 @@ img {
   display: flex;
   align-items: center;
   margin-right: auto;
+
 }
 .header-logo-part {
   color: #2e2f42;
@@ -78,6 +79,22 @@ display: block;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.active{
+  color: #404BBF;
+}
+.active::after{
+  content:"";
+  width: 100%;
+  border-radius: 2px;
+background-color: #404BBF;
+height: 4px;
+display: block;
+position: absolute;
+bottom: -1px;
+left: 0;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -92,6 +109,7 @@ display: block;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact:hover,
 .contact:focus {
@@ -101,6 +119,14 @@ display: block;
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: 
+  linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
+  
 }
 .main-title {
   color: #fff;
@@ -112,6 +138,7 @@ display: block;
   margin-right: auto;
   margin-bottom: 48px;
   margin-left: auto;
+
 }
 
 
@@ -131,6 +158,9 @@ display: block;
   height: 56px;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -154,6 +184,17 @@ display: block;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+}
+.advantages-box{
+  width: 264px;
+height: 112px;
+border-radius: 4px;
+border: 1px solid  #8E8F99;
+background-color: #F4F4FD;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 8px;
 }
 
 .subtitle {
@@ -185,6 +226,7 @@ text-transform: capitalize;
     background-color: #FFF; 
     width: calc((100% - 72px)/4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-box {
   padding: 32px 0;
@@ -205,6 +247,33 @@ text-align: center;
 font-size: 16px;
 line-height: 1.5; 
 letter-spacing: 0.02em;
+margin-bottom: 8px;
+}
+.team-social-list{
+  display: flex;
+  gap: 24px;
+  justify-content:center ;
+}
+.team-social-item{
+  width: 40px;
+height: 40px;
+}
+.team-social-link{
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-social-link:hover,
+.team-social-link:focus{
+  background-color: #404BBF;
+}
+.team-social-icon{
+fill: #F4F4FD;
 }
 .portfolio {
   padding-top: 120px;
@@ -242,6 +311,31 @@ font-size: 16px;
 line-height: 1.5; 
 letter-spacing: 0.02em;
 }
+.overlay-box{
+  overflow: hidden;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background-color: #4D5AE5;
+  color: #F4F4FD;
+  transform: translateY(100%);
+font-size: 16px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+font-weight: 400;
+line-height: 1.5; 
+letter-spacing: 0.03em;
+padding: 40px 32px;
+}
+.portfolio-item:hover{
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.portfolio-item:hover .overlay{
+  transform: translateY(0%);
+}
 .footer {
     background-color: #2E2F42;
     padding-top: 100px;
@@ -271,4 +365,27 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5; 
 letter-spacing: 0.02em;
+max-width: 264px;
+}
+.social-title{
+  color:  #FFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5; 
+letter-spacing: 0.03em;
+margin-bottom: 16px;
+}
+.footer-social-list{
+  display: flex;
+  gap: 16px;
+}
+.footer-container{
+  display: flex;
+  align-items: baseline;
+}
+.first-box{
+  margin-right: 120px;
+}
+.footer-link:hover, .footer-link:focus{
+background-color: #31D0AA;
 }
